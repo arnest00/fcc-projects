@@ -1,0 +1,96 @@
+function checkCashRegister(price, cash, cid) {
+  let changeObj = {
+    status: 'INSUFFICIENT_FUNDS',
+    change: []
+  };
+  
+  const cf = 100;
+  
+  const denomObj = {
+    'ONE HUNDRED': 100,
+    'TWENTY': 20,
+    'TEN': 10,
+    'FIVE': 5,
+    'ONE': 1,
+    'QUARTER': 0.25,
+    'DIME': 0.1,
+    'NICKEL': 0.05,
+    'PENNY': 0.01,
+  };
+
+  const totalCID = cid
+    .map(e => e[1])
+    .reduce((acc, curr) => { return acc + curr }, 0)
+    .toFixed(2);
+  // console.log('Total CID:', totalCID);
+
+  const changeDue = cash - price;
+  // console.log('Change due:', changeDue);
+
+  if (totalCID < changeDue) {
+    console.log(changeObj);
+    return changeObj;
+  };
+
+  if (totalCID == changeDue) {
+    changeObj.status = 'CLOSED';
+    changeObj.change = cid;
+
+    console.log(changeObj);
+    return changeObj;
+  };
+
+  const makeChange = (changeDue) => {
+    const changeArr = {};
+    let remaining = changeDue;
+
+    const cidObj = {};
+    for (let i = cid.length - 1; i >= 0; i--) {
+      cidObj[cid[i][0]] = cid[i][1];
+    };
+
+    for (const denom in denomObj) {
+      while (remaining >= denomObj[denom]) {
+        if (cidObj[denom] > 0) {
+          cidObj[denom] -= denomObj[denom];
+          remaining -= denomObj[denom];
+          if (changeArr[denom]) {
+            changeArr[denom] += denomObj[denom];
+          } else {
+            changeArr[denom] = denomObj[denom];
+          }
+        } else {
+          break;
+        };
+      };
+    };
+
+    console.log(remaining);
+
+    if (remaining * 100 < 1) {
+      if (changeArr['PENNY']) {
+        changeArr['PENNY'] += 0.01;
+      }
+      return Object.entries(changeArr);
+    } else {
+      return false;
+    }
+  }
+  
+  if (totalCID > changeDue) {
+    const flag =  makeChange(changeDue);
+
+    if (!flag) {
+      console.log(changeObj);
+      return changeObj;
+    } else {
+      changeObj.status = 'OPEN';
+      changeObj.change = flag;
+
+      console.log(changeObj);
+      return changeObj;
+    }
+  };
+}
+
+checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);

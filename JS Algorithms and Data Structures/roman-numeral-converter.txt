@@ -1,0 +1,84 @@
+function convertToRoman(num) {
+  const decimalValue = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  const romanValue = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+
+  const numArr = num
+    .toString()
+    .split('')
+    .map(e => {
+      return parseInt(e);
+    })
+    .reverse();
+  console.log(numArr);
+
+  let ones = numArr[0];
+  let tens = numArr[1] * 10;
+  let hunds = numArr[2] * 100;
+  let thous = numArr[3] * 1000;
+  console.log(ones, tens, hunds, thous);
+
+  let roman = [];
+
+  while (thous >= 1000) {
+    roman.push(romanValue[decimalValue.indexOf(1000)]);
+    thous -= 1000;
+  };
+
+  while (hunds >= 100) {
+    if (hunds >= 900) {
+      roman.push(romanValue[decimalValue.indexOf(900)])
+      hunds -= 900;
+    } else if (hunds >= 500) {
+      roman.push(romanValue[decimalValue.indexOf(500)])
+      hunds -= 500;
+    } else if (hunds >= 400) {
+      roman.push(romanValue[decimalValue.indexOf(400)])
+      hunds -= 400;
+    } else {
+      roman.push(romanValue[decimalValue.indexOf(100)]);
+      hunds -= 100;
+    }
+  };
+
+    while (tens >= 10) {
+    if (tens >= 90) {
+      roman.push(romanValue[decimalValue.indexOf(90)])
+      tens -= 90;
+    } else if (tens >= 50) {
+      roman.push(romanValue[decimalValue.indexOf(50)])
+      tens -= 50;
+    } else if (tens >= 40) {
+      roman.push(romanValue[decimalValue.indexOf(40)])
+      tens -= 40;
+    } else {
+      roman.push(romanValue[decimalValue.indexOf(10)]);
+      tens -= 10;
+    }
+  };
+
+  while (ones >= 1) {
+    if (ones >= 9) {
+      roman.push(romanValue[decimalValue.indexOf(9)])
+      ones -= 9;
+    } else if (ones >= 5) {
+      roman.push(romanValue[decimalValue.indexOf(5)])
+      ones -= 5;
+    } else if (ones >= 4) {
+      roman.push(romanValue[decimalValue.indexOf(4)])
+      ones -= 40;
+    } else {
+      roman.push(romanValue[decimalValue.indexOf(1)]);
+      ones -= 1;
+    }
+  };
+
+  console.log(roman.join(''));
+  return roman.join('');
+}
+
+convertToRoman(3999);
+convertToRoman(2014);
+convertToRoman(1006);
+convertToRoman(891);
+convertToRoman(798);
+convertToRoman(2);

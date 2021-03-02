@@ -1,0 +1,17 @@
+function rot13(str) {
+  const alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+  const cipher = ['N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A','B','C','D','E','F','G','H','I','J','K','L','M'];
+  
+  const newStr = str.split('').map(e => {
+    if (/[\w]/.test(e)) {
+      return cipher[alpha.indexOf(e)];
+    } else if (/[\W]/.test(e)) {
+      return e;
+    }
+  }).join('');
+
+  console.log(newStr);
+  return newStr;
+}
+
+rot13("SERR PBQR PNZC");

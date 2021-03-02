@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+<h1 id="title">Survey Form</h1>
+
+<div id="container">
+
+	<p id="description">Please take some time to let us know how we can better serve you at Acme Burger.</p>
+
+	<form id="survey-form">
+
+		<div class="form-label">
+			<label for="name" id="name-label">Name (required):</label>
+		</div>
+		<div class="form-input">
+			<input type="text" id="name" class="input-field" name="name" placeholder="Your full name" required>
+		</div>
+
+		<div class="form-label">
+			<label for="email" id="email-label">E-mail (required):</label>
+		</div>
+		<div class="form-input">
+			<input type="email" id="email" class="input-field" name="email" placeholder="Your e-mail address" required>
+		</div>
+
+		<div class="form-label">
+			<label for="number" id="number-label">Age (required):</label>
+		</div>
+		<div class="form-input">
+			<input type="number" id="number" class="input-field" name="number" min="18" max="99" placeholder="Your age">
+		</div>
+
+		<div class="form-label">
+			<label for="dropdown" id="dropdown-label">Which Acme Burger location did you visit?</label>
+		</div>
+		<div class="form-input">
+			<select id="dropdown" name="dropdown">
+				<option disabled value>Select an location</option>
+				<option value="alexandria">Alexandria, VA</option>
+				<option value="rockville">Rockville, MD</option>
+				<option value="dc">Washington, DC</option>
+			</select>
+		</div>
+
+		<div class="form-label">
+			<p>Would you recommend Acme Burger to friends or family?</p>
+		</div>
+		<div class="form-input">
+			<ul>
+				<li>
+					<label>
+						<input type="radio" name="radio" value="2" checked>
+						Absolutely
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="radio" value="1">
+						Probably
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="radio" value="0">
+						Unsure
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="radio" value="-1">
+						Probably Not
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="radio" value="-2">
+						Absolutely Not
+					</label>
+				</li>
+			</ul>
+		</div>
+
+		<div class="form-label">
+			<p>Which of our promotional Shark Week menu items have you tried?<br>(Check all that apply.)</p>
+		</div>
+		<div class="form-input">
+			<ul>
+				<li>
+					<label>
+						<input type="checkbox" name="check" value="california">
+						California Burrito
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" name="check" value="eel">
+						Eelsicle
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" name="check" value="geoduck">
+						Geoduck Chili
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" name="check" value="hammerhead">
+						Hammerhead Burger
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" name="check" value="jellyfish">
+						Peanut Butter and Jellyfish Sandwich
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" name="check" value="sea-angel">
+						Sea Angel Food Cake
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" name="check" value="starfish">
+						Starfish Sundae
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" name="check" value="squid">
+						Squid Ink Fries
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" name="check" value="tuna">
+						Tuna Melt
+					</label>
+				</li>
+			</ul>
+		</div>
+
+		<div class="form-label">
+			<label id="textarea-label" for="textarea">Are there any other comments or suggestions you would like to share?</label>
+		</div>
+		<div class="form-input">
+			<textarea id="textarea" class="input-field" name="textarea" rows="6">Tell us about them here!</textarea>
+		</div>
+
+		<div id="button-div">
+			<button type="submit" id="submit">Submit</button>
+		</div>
+
+	</form>
+
+</div>
+
+</body>
+</html>

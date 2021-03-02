@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twine 2 Guide</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+<body>
+
+	<nav id="navbar">
+		<header>Twine 2 Guide</header>
+		<ul>
+			<li><a href="#Introduction" class="nav-link">Introduction</a></li>
+			<li><a href="#Getting_Started" class="nav-link">Getting Started</a></li>
+			<li><a href="#Your_First_Story" class="nav-link">Your First Story</a></li>
+			<li><a href="#Story_Formats" class="nav-link">Story Formats</a></li>
+			<li><a href="#Creating_Links" class="nav-link">Creating Links</a></li>
+			<li><a href="#Formatting_Text" class="nav-link">Formatting Text</a></li>
+			<li><a href="#Reviewing_Your_Story" class="nav-link">Reviewing Your Story</a></li>
+			<li><a href="#Reference" class="nav-link">Reference</a></li>
+		</ul>
+	</nav>
+
+	<main id="main-doc">
+		<section class="main-section" id="Introduction">
+			<header>Introduction</header>
+			<article>
+				<p>
+					At its heart, Twine is a tool for creating hypertext. The difference between hypertext and a linear story, the kind found in books and magazines, is that it allows the reader to have some measure of agency. In other words, the reader has some ability over what he or she reads next. In a story about a haunted house, for example, the reader might be able to tell the protagonist to Turn around and run or Venture deeper into the mausoleum. In a nonfiction piece, the reader might ask to learn more about my aunt who went missing. The convention that has emerged over the past three decades is that readers navigate hypertexts by clicking links. In this sense, you're already a seasoned hypertext reader. You clicked several links to reach this text, after all, and you've probably clicked an uncountable number of links in your life so far.
+				</p>
+				<p>
+					Because hypertext branches so much, it's easy to get lost in your own work. Much of Twine is dedicated to helping you keep track of your work's structure visually with a story map, so you can see what your readers' experience will be like.
+				</p>
+				<p>
+					Can you build games with Twine? Of course! Twine has the capability to do conditional logic, so if the protagonist finds a key in an early part of the story, he or she can use it to open a door later on. It can also incorporate variables, which encompass the traditional trappings of games such as hit points and score. These, along with agency, are foundational concepts of interactivity, the currency of game design.
+				</p>
+			</article>
+		</section>
+
+		<section class="main-section" id="Getting_Started">
+			<header>Getting Started</header>
+			<article>
+				<p>
+					You can start working with Twine 2 in two main ways. Although you can use more than one way at a time, the stories you create will not be shared between them. You can still export and import your stories between them, of course – it is just a manual process.
+				</p>
+				<ul>
+					<li>Direct from twinery.org</li>
+					<li>Download Twine 2 to your own computer</li>
+				</ul>
+			</article>
+		</section>
+
+		<section class="main-section" id="Your_First_Story">
+			<header>Your First Story</header>
+			<article>
+				<p>
+					This step will step you through creating a very simple branching story with Twine. We'll start with the premise that you play an astronaut exploring the far reaches of space. You've found a planet that seems just like Earth, only there are strange creatures living on it instead of humans!
+				</p>
+				<p>
+					Use the green + Story button on the right side of the screen to get started with your new story. It will pop open a balloon asking what to call it. You can name it whatever you like – if you're not feeling creative, you can't go wrong with <em>Strange Encounter in Space</em>.
+				</p>
+				<p>
+					As soon as you give your story a name, you'll be taken to its story map. The story map is a canvas for your story that will expand in size as much as you like. You can move around it using the scroll bars of the window, or if you're using a touch-based device, just dragging around with your finger.
+				</p>
+				<p>
+					You'll notice that a box pops onto your story map as soon as it opens, called “Untitled Passage.” Your story will be made up of individual passages. Usually, passages are shown one at a time to a reader. Let's enter some text in that starting passage. You can do that by either double-clicking it with a mouse, or by tapping it with your finger on a touch-based device and choosing the pencil from the icons that appear.
+				</p>
+				<p>
+					At the top of the editor that appears is a field with your passage's name. You can change that any time. Underneath that is a button to add tags to your passage. For now, you can leave that be. The rest of the editor is for changing the text. Go ahead and enter a description of what encountering those creatures is like.
+				</p>
+<pre><code>As soon as the hatch of your ship, the Coriolis, opens, you see the creatures swarming around you.
+There are many of them, more than you can easily count, and they are all continuously in motion.</code></pre>
+				<p>
+					Close the passage editor either with the Escape key, or by clicking or tapping the X in the upper-right corner. There's no need to save your work – Twine will automatically do it for you as you make changes. Now let's see what it looks like in action. Click or tap the Play button on the right side of the toolbar.
+				</p>
+				<p>
+					A new window or tab will appear that shows your story in playable format. Except… it's not very playable right now, is it? There's nothing for a reader to do but read. Let's add some choices for what to do next. Go back to the story map and edit your passage again, and add this text at the bottom:
+				</p>
+<pre><code>[[Try talking to the creatures]]
+[[Walk down the ramp of your spaceship]]</code></pre>
+				<p>
+					As soon as you close the editor, Twine will create two new passages for you with the names of these choices, and draw connecting lines between them to show that they're linked. These passages have a thinner border than the first one. Twine highlights the starting point of your story with a thicker border. You can change the starting point with the rocketship icon on the passage's menu. (Think of it like a ship taking off a voyage.)
+				</p>
+				<p>
+					You can rearrange the passages in the story map by dragging them with your mouse or finger. Organize things however you like! Go ahead and edit these new passages with what you think would happen next. Are the creatures hostile? Do they understand the protagonist's language? (Probably not – but if they do, that's an interesting story in itself.)
+				</p>
+				<p>
+					Once you've added text to the Try talking to the creatures and Walk down the ramp of your spaceship passages, try the Play button again. You'll now see clickable links at the end of your story.
+				</p>
+				<p>
+					So, now you know enough to create a simple story! You can either keep adding passages to those new ones, or even go back to the beginning and add another option, like <code class="p-code">[[Scan the creatures with your equipment]]</code>.
+				</p>
+				<p>
+					Once you're done with your story, click or tap the title of your story in the toolbar. It has a little upward triangle at its end to indicate that it's a menu. This is the story menu. It contains options that you won't use as often as you work on your story. For example, you can Rename Story from this menu, but what we're interested in doing is Publish to File. This will save your story into an HTML file that works on its own – your readers don't have to install Twine themselves. You can email this file to someone or post it for the world to see.
+				</p>
+				<p>
+					That's it! You now know everything you need to make a simple story. Of course, there's a lot more you can accomplish with Twine. The rest of this guide can help you learn.
+				</p>
+			</article>
+		</section>
+
+		<section class="main-section" id="Story_Formats">
+			<header>Story Formats</header>
+			<p>
+				When you publish your story to a file, that file doesn't contain the entire Twine editor. That'd be wasteful, since most people reading your story won't be interested in editing it. Instead, your story is bound to a story format, whose job is to show your story in a playable format.
+			</p>
+			<p>
+				This process is a little like taking a word processing document, which is easy to make changes to, and running it through a printing press and then binding the results as a book – which, apart from scribbling in the margins, you aren't able to change. At the same time, a book is a lot more enjoyable to read than a word processing document.
+			</p>
+			<p>
+				There are three story formats that come with Twine 2.0, and they serve different purposes.
+			</p>
+			<ul>
+				<li>Harlowe</li>
+				<li>Snowman</li>
+				<li>SugarCube</li>
+			</ul>
+			<p>
+				Each format has a different look and feel out-of-the-box, but all of them allow you to customize their apperance. And all of them are designed to work reasonably well on a mobile browser, too. Instead, the best way to judge is to take a look at the project pages and decide which will be the easiest to accomplish what your project needs.
+			</p>
+			<p>
+				It can also be helpful to see how scripting in each format looks. Here's how you would write the script for a door that can only be opened if the reader previously found a key of a particular color:
+			</p>
+			<p>
+				Harlowe:
+			</p>
+<pre><code>(if: $hasKey)[It looks like the $keyColor key will [[open the door]].]
+(else:)[No way forward here, unfortunately.]</code></pre>
+			<p>
+				Snowman:
+			</p>
+<pre><code><% if (s.hasKey) { %>
+It looks like the <%= s.keyColor %> key will [[open the door]].
+<% } else { %>
+No way forward here, unfortunately.
+<% } %></code></pre>
+			<p>
+				SugarCube:
+			</p>
+<pre><code><<if $hasKey>>
+It looks like the $keyColor key will [[open the door]].
+<<else>>
+No way forward here, unfortunately.
+<</if>></code></pre>
+		</section>
+
+		<section class="main-section" id="Creating_Links">
+			<header>Creating Links</header>
+			<p>
+				Most of the time, you'll be linking from one passage to another. The easiest way to do this is to put the name of the passage you're linking to in between two square brackets, <code class="p-code">[[like this]]</code>. This will turn the passage name into a clickable link.
+			</p>
+			<p>
+				However, you may also want to have the text shown on the page be different from the passage name. For example, you might have two ways to reach a passage, or you may not want to give away the name of the destination. In these cases, you can write this:
+			</p>
+<pre><code>[[Open the cage door->Devoured by Lions]]
+[[Devoured by Lions<-Open the cage door]]
+[[Open the cage door|Devoured by Lions]]</code></pre>
+			<p>
+				The above examples work in Harlowe, Snowman, and SugarCube.
+			</p>
+		</section>
+
+		<section class="main-section" id="Formatting_Text">
+			<header>Formatting Text</header>
+			<p>
+				You'll notice that there aren't buttons to add bold or italic styles to your text in Twine, like in a word processor. Instead, Twine story formats use special characters to convey style information. The special characters you type are changed into styles when you play or test your story.
+			</p>
+			<p>
+				The exact characters to enter depend on which story format you're using. Harlowe and Snowman both use Markdown, a commonly-used set of formatting instructions. SugarCube instead uses TiddlyWiki formatting.
+			</p>
+			<table>
+				<thead>
+					<tr>
+						<th>
+							
+						</th>
+						<th>
+							Harlowe
+						</th>
+						<th>
+							Snowman
+						</th>
+						<th>
+							SugarCube
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Bold</b></td>
+						<td><code class="p-code">**Bold**</code> or <code class="p-code">''Bold''</code></td>
+						<td><code class="p-code">**Bold**</code></td>
+						<td><code class="p-code">''Bold''</code></td>
+					</tr>
+					<tr>
+						<td><em>Italics</em></td>
+						<td><code class="p-code">*Italics*</code> or <code class="p-code">//Italics//</code></td>
+						<td><code class="p-code">*Italics*</code></td>
+						<td><code class="p-code">//Italics//</code></td>
+					</tr>
+					<tr>
+						<td><u>Underlined</u></td>
+						<td><code class="p-code">&lt;u&gt;Underlined&lt;/u&gt;</code></td>
+						<td><code class="p-code">&lt;u&gt;Underlined&lt;/u&gt;</code></td>
+						<td><code class="p-code">__Underlined__</code></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				You can combine styles in any story format by combining them, so that <code class="p-code">***bold and italic***</code> will be displayed as bold and italic in Harlowe. In SugarCube, you'd write <code class="p-code">**//bold and italic//**</code> or <code class="p-code">//**bold and italic**//</code> – both would work equally well.
+			</p>
+			<p>
+				Sometimes, you don't want to have special characters interpreted as styles. To help you out in this instance, story formats have special characters that note that any text between them should be displayed as-is.
+			</p>
+			<table>
+				<thead>
+					<tr>
+						<th>
+							
+						</th>
+						<th>
+							Harlowe
+						</th>
+						<th>
+							Snowman
+						</th>
+						<th>
+							SugarCube
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>*Boom!*</td>
+						<td><code class="p-code">``*Boom!*``</code></td>
+						<td><code class="p-code">\*Boom!\*</code></td>
+						<td><code class="p-code">&quot;&quot;&quot;*Boom!*&quot;&quot;&quot;</code> or <code class="p-code">&lt;nowiki&gt;*Boom!*&lt;/nowiki&gt;</code></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				But what if you want to use these special characters? You enter them twice in succession, <code class="p-code">````like this````</code>.
+			</p>
+		</section>
+
+		<section class="main-section" id="Reviewing_Your_Story">
+			<header>Reviewing Your Story</header>
+			<p>
+				Ready to publish your story? Great! Here's a few ways Twine helps you put the finishing touches on your work.
+			</p>
+			<p>
+				<strong>Proofreading</strong> your work can be daunting since you'd normally need to look at each passage individually in the editor. Instead, choose View Proofing Copy from the story menu. This will create a plain text document with all of the text of your story split into sections based on passages. You can print this document as-is, save to a PDF with your browser, or copy and paste it into a word processor.
+			</p>
+			<p>
+				<strong>Checking for broken links</strong> can be done in two ways. First, any passages that do have broken links will be tinted red in the story map. Secondly, choose Story Statistics from the story menu. If the number of broken links is 0, then you're good.
+			</p>
+		</section>
+
+		<section class="main-section" id="Reference">
+			<header>Reference</header>
+			<ul>
+				<li>All the text on this page is taken from <a href="https://twinery.org/wiki/start">Twine Wiki</a></li>
+			</ul>
+		</section>
+	</main>
+
+</body>
+</html>

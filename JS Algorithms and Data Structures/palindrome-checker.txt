@@ -1,0 +1,35 @@
+function palindrome(str) {
+  let isPalindrome = false;
+
+  const newArr = str
+    .toLowerCase()
+    .split('')
+    .filter(letter =>
+      /[a-z]|[1-9]/.test(letter)
+    );
+  const newStr = newArr.join('');
+
+  const makeCompareArr = (arr) => {
+    const compareArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      compareArr.unshift(arr[i]);
+    };
+    return compareArr;
+  };
+  const compareStr = makeCompareArr(newArr).join('');
+
+  if (newStr === compareStr) {
+    isPalindrome = true;
+  };
+
+  return isPalindrome;
+}
+
+
+
+palindrome("eye");
+palindrome("_eye");
+palindrome("race car");
+palindrome("not a palindrome");
+palindrome("A man, a plan, a canal. Panama");
+palindrome("0_0 (: /-\ :) 0-0");
